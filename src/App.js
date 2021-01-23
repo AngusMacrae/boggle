@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import './App-reset.css';
 import './App.css';
+// import logo from './img/logo.svg';
+import Board from './components/Board';
+import ControlPanel from './components/ControlPanel';
 
 function App() {
+  const [letters, setLetters] = useState(Array(16).fill('?'));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className='App-header'>
+        <h1>Boggle!</h1>
       </header>
-    </div>
+      <main className='App-main'>
+        <Board letters={letters} />
+        <ControlPanel setLetters={setLetters} />
+      </main>
+      <footer className='App-footer'>
+        <small>Angus Macrae | 2021</small>
+      </footer>
+    </>
   );
 }
 

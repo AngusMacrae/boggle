@@ -1,0 +1,17 @@
+.Board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 600px;
+  width: 600px;
+  max-width: 90vw;
+  max-height: 90vw;
+  font-size: min(74px, 10vw);
+  font-weight: bold;
+}
+
+.Board .letter {
+  display: grid;
+  place-items: center;
+  border: solid black 1px;
+}
