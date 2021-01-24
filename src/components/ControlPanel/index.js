@@ -36,7 +36,7 @@ export default function ControlPanel({ setLetters, gameState, setGameState }) {
     return () => {
       clearInterval(countDown);
     };
-  }, [gameState, secondsRemaining]);
+  }, [gameState, setGameState, secondsRemaining]);
 
   return (
     <div className='flow ControlPanel'>
