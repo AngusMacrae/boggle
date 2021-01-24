@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.ControlPanel ul {
+  margin-bottom: 0;
+}
+
 .ControlPanel .controls {
   flex: 1;
 }
