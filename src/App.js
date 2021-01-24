@@ -7,6 +7,8 @@ import ControlPanel from './components/ControlPanel';
 
 function App() {
   const [letters, setLetters] = useState(Array(16).fill('?'));
+  const [gameState, setGameState] = useState('IDLE');
+
   return (
     <>
       <header className='App-header'>
@@ -14,7 +16,7 @@ function App() {
       </header>
       <main className='App-main'>
         <Board letters={letters} />
-        <ControlPanel setLetters={setLetters} />
+        <ControlPanel setLetters={setLetters} gameState={gameState} setGameState={setGameState} />
       </main>
       <footer className='App-footer'>
         <small>Angus Macrae | 2021</small>
