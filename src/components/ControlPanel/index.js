@@ -16,7 +16,7 @@ export default function ControlPanel({ setLetters }) {
   }
 
   return (
-    <div className='flow'>
+    <div className='flow ControlPanel'>
       <h2>Instructions</h2>
       <p>Click the Start button to set the timer running, and try to combine the letters to form as many words as you can before it reaches zero!</p>
       <p>Words can be formed from 3 or more letters. Letters must be directly adjacent to each other (including diagonally) in order to be linked together.</p>
@@ -28,7 +28,11 @@ export default function ControlPanel({ setLetters }) {
         <li>7 letters: 4 points</li>
         <li>8+ letters: 5 points</li>
       </ul>
-      <button onClick={startGame}>Start Game</button>
+      <div className='controls'>
+        <button onClick={startGame}>Start Game</button>
+        {/* <span>You have 3 minutes!</span> */}
+        {/* <span>3:00</span> */}
+      </div>
     </div>
   );
 }

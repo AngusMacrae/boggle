@@ -1,0 +1,13 @@
+.ControlPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.ControlPanel .controls {
+  flex: 1;
+}
+
+.ControlPanel .controls > * {
+  width: 100%;
+  height: 100%;
+}
