@@ -39,23 +39,10 @@ export default function ControlPanel({ setLetters, gameState, setGameState }) {
   }, [gameState, setGameState, secondsRemaining]);
 
   return (
-    <div className='flow ControlPanel'>
-      <h2>Instructions</h2>
-      <p>Click the Start button to set the timer running, and try to combine the letters to form as many words as you can before it reaches zero!</p>
-      <p>Words can be formed from 3 or more letters. Letters must be directly adjacent to each other (including diagonally) in order to be linked together.</p>
-      <h2>Scoring</h2>
-      <ul>
-        <li>3/4 letters: 1 point</li>
-        <li>5 letters: 2 points</li>
-        <li>6 letters: 3 points</li>
-        <li>7 letters: 4 points</li>
-        <li>8+ letters: 5 points</li>
-      </ul>
-      <div className='controls'>
-        {gameState === 'IDLE' && <button onClick={startGame}>Start Game</button>}
-        {gameState === 'IN PROGRESS' && <CountDownTimer seconds={secondsRemaining} />}
-        {gameState === 'FINISHED' && <span>Finished!</span>}
-      </div>
+    <div className='ControlPanel'>
+      <button onClick={startGame}>Start Game</button>
+      <CountDownTimer seconds={secondsRemaining} />
+      {gameState === 'FINISHED' && <span>Finished!</span>}
     </div>
   );
 }
