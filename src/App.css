@@ -1,5 +1,5 @@
 body {
-  padding: 0 0.5rem;
+  padding: 0 0.8rem;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -12,15 +12,16 @@ body {
 .App-header {
   margin: 1rem;
   text-align: center;
+  font-size: 1.25rem;
 }
 
 .App-main {
   flex: 1;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 1.5rem;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
 }
 
 .App-footer {
